@@ -1,4 +1,4 @@
-package br.com.lrds.fipe.ui.theme
+package br.com.lrds.fipe.shared.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

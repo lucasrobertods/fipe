@@ -1,4 +1,4 @@
-package br.com.lrds.fipe.ui.theme
+package br.com.lrds.fipe.shared.ui.theme
 
 import android.app.Activity
 import android.os.Build

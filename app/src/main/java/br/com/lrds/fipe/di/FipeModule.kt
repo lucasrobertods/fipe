@@ -11,6 +11,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @ExperimentalCoroutinesApi
@@ -30,5 +32,8 @@ class FipeModule {
     fun providesGetBrandsUseCase(
         fipeRepository: FipeRepository
     ) : GetBrandsUseCase = GetBrandsUseCaseImpl(fipeRepository)
+
+    @Provides
+    fun providesIoDispatcher(): CoroutineDispatcher = Dispatchers.IO
 
 }

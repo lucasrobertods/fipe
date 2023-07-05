@@ -12,13 +12,15 @@ class FipeRepositoryImpl @Inject constructor(
 ) : FipeRepository {
 
     override suspend fun getBrands(): NetworkResult<List<Brand>> {
-        return when (val result = safeApiCall {
+        return safeApiCall {
             api.getBrands()
-        }) {
-            is NetworkResult.Success -> {
-                NetworkResult.Success(result.data.toBrand())
+        }.let { networkResult ->
+            when (networkResult) {
+                is NetworkResult.Success -> {
+                    NetworkResult.Success(networkResult.data.toBrand())
+                }
+                is NetworkResult.Error -> networkResult
             }
-            is NetworkResult.Error -> result
         }
     }
 

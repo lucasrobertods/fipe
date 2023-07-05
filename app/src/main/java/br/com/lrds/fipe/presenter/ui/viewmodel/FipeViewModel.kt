@@ -24,7 +24,7 @@ class FipeViewModel @Inject constructor(
         viewModelScope.launch {
             _viewState.postValue(ViewState.Loading)
             when(val result = getBrandsUseCase()) {
-                is NetworkResult.Success -> _viewState.postValue(ViewState.Content(result.value))
+                is NetworkResult.Success -> _viewState.postValue(ViewState.Content(result.data))
                 is NetworkResult.Error -> _viewState.postValue(ViewState.Error(result.message))
             }
         }

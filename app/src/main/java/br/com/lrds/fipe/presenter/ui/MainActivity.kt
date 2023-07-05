@@ -46,7 +46,7 @@ fun Home(state: ViewState?) {
     when(state) {
         is ViewState.Loading -> LoadingState()
         is ViewState.Content<*> -> BrandList(state.data as List<Brand>)
-        is ViewState.Error -> Text("Error NULL")
+        is ViewState.Error -> Text(state.message.toString())
         null -> Text("Error NULL")
     }
 }

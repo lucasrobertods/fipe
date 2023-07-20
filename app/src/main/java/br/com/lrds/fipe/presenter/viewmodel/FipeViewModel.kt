@@ -1,4 +1,4 @@
-package br.com.lrds.fipe.presenter.ui.viewmodel
+package br.com.lrds.fipe.presenter.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

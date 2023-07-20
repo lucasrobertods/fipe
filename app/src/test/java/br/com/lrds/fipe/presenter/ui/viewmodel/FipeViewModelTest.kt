@@ -3,6 +3,7 @@ package br.com.lrds.fipe.presenter.ui.viewmodel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import br.com.lrds.fipe.domain.model.Brand
 import br.com.lrds.fipe.domain.usecase.GetBrandsUseCase
+import br.com.lrds.fipe.presenter.viewmodel.FipeViewModel
 import br.com.lrds.fipe.shared.network.NetworkResult
 import br.com.lrds.fipe.shared.ui.ViewState
 import io.mockk.coEvery

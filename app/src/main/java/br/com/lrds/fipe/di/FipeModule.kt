@@ -5,7 +5,7 @@ import br.com.lrds.fipe.data.repository.FipeRepository
 import br.com.lrds.fipe.data.repository.FipeRepositoryImpl
 import br.com.lrds.fipe.domain.usecase.GetBrandsUseCase
 import br.com.lrds.fipe.domain.usecase.GetBrandsUseCaseImpl
-import br.com.lrds.fipe.presenter.ui.viewmodel.FipeViewModel
+import br.com.lrds.fipe.presenter.viewmodel.FipeViewModel
 import br.com.lrds.fipe.shared.network.Service
 import dagger.Module
 import dagger.Provides
